@@ -19,6 +19,7 @@
     
     <center>
         <form style="margin-top:50px">
+          {% csrf_token%}
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Phone number</label>
               <input style="width: 500px;" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

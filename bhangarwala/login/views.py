@@ -5,7 +5,7 @@ from flask import request
 # Create your views here.
 
 def register(request):
-   return render(request,'register.html')
+   return render(request,'login/register.html')
 
 def login(request):
-    return render(request,'login.html')
+    return render(request,'login/login.html')

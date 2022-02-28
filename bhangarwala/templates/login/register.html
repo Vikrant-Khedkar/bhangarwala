@@ -11,6 +11,8 @@
 <body>
     <center>
     <form style="margin-top: 50px;" class="row g-3">
+      {% csrf_token%}
+
         <div class="col-md-12">
           <label for="inputPhone44" class="form-label">Phone</label>
           <input style="width: 500px;" type="number" class="form-control" id="inputPhone4">
