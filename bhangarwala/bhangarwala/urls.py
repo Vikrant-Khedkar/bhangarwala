@@ -22,7 +22,8 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/',views.hello),
-    path('login/',include('login.urls'))
+    path('login/',include('login.urls')),
+    #path('login/',include('django.contrib.auth.urls'))
     
     
 ]

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +8,9 @@
     <title>Login</title>
 </head>
 <body>
+  <div class="container">
+
+  </div>
     <center style="margin-top:100px">
     <p class="h1">भंgarwala</p>
     <p class="h4">देख मत बैच डाल
@@ -18,16 +20,16 @@
 
     
     <center>
-        <form style="margin-top:50px">
+        <form style="margin-top:50px" action="/login/auth" method="POST">
           {% csrf_token%}
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Phone number</label>
-              <input style="width: 500px;" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="exampleInputName1" class="form-label">Userame </label>
+              <input style="width: 500px;" type="text" class="form-control" name="username" id="username" aria-describedby="emailHelp">
               <div id="emailHelp" class="form-text">We'll never share your details with anyone else.</div>
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input style="width: 500px;" type="password" class="form-control" id="exampleInputPassword1">
+              <input style="width: 500px;" type="password" name='password' class="form-control" id="password">
             </div>
             
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -37,6 +39,6 @@
     </form>
 </center>
 
-    
+   
 </body>
 </html>
