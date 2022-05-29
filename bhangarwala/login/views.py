@@ -1,4 +1,5 @@
 from asyncio.windows_events import NULL
+import imp
 import re
 from django import forms
 import email
@@ -10,7 +11,7 @@ from django.contrib.auth.models import User,UserManager
 from django.contrib import messages 
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate,login ,logout
-
+from login.models import Details
 
 # Create your views here.
 #class userform(forms.Modelform)
@@ -43,10 +44,23 @@ def signin(request):
           print('Working')
           login(request, user)
           fname= user.first_name
-          return render(request,"home/index.html",{'fname':fname})
+          return render(request,"home/home.html",{'fname':fname})
        else:
           print('failed')
           messages.success(request,("Bad credentials"))
           #return redirect('login')
 
     return render(request,'login/login.html') 
+
+def address(request):
+  
+
+
+   
+   return render(request,'home/address.html') 
+
+def weight(request):
+   return render(request,'home/weight.html')
+
+def success(request):
+   return render(request,'home/success.html')

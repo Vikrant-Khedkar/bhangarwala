@@ -21,5 +21,7 @@ from . import views
 urlpatterns = [
     path('register',views.register,name='register'),
     path('auth',views.signin, name='auth'),
-    
+    path('address',views.address,name="address"),
+    path('weight',views.weight,name='weight'),
+    path('success',views.success,name='success'),
 ]
